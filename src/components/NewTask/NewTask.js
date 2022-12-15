@@ -8,7 +8,7 @@ const NewTask = (props) => {
   const { isLoading, error, sendRequest: sendTaskRequest } = useHttp();
 
   const createdTask = (taskText, taskData) => {
-    console.log(taskText, taskData.name);
+    console.log(taskText, taskData);
     const generatedId = taskData.name; // firebase-specific => "name" contains generated id
     const createdTask = { id: generatedId, text: taskText };
 
@@ -23,7 +23,7 @@ const NewTask = (props) => {
         header: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ text: taskText }),
+        body:{ text: taskText },
       },
       createdTask.bind(null, taskText)
     );

@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://usehttp-f5e58-default-rtdb.firebaseio.com'
+export const BASE_URL = 'https://test-117b3-default-rtdb.firebaseio.com'
